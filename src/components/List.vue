@@ -1,46 +1,52 @@
 <template>
-  <div class="m-list">
-    <ul>
-      <li>
-        <img class="avatar" width="30" height="30" src="../assets/logo.png">
-        <p class="name">tysry</p>
-      </li>
-    </ul>
+  <div class="list-box">
+    <img src="../assets/face.jpg">
+    <div id="middle-box">
+      <div id="name">就是玩</div>
+      <div id="content">就是傻着</div>
+    </div>
+    <div id="right-box"></div>
   </div>
 </template>
 <script>
 export default {
-  name: 'list',
-  data () {
-    return {
-    }
+  name: "list",
+  data() {
+    return {};
   }
-}
+};
 </script>
 <style>
-li {
-  width: 100%;
-  height: 20px;
-  padding: 12px 15px;
-  border-bottom: 1px solid #292c33;
-  cursor: pointer;
-  transition: background-color 0.1s;
+.list-box {
+  height: 50px;
+  background-color:#CDC9C9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
-li:hover {
-  background-color: rgba(221, 217, 217, 0.096);
+img {
+  width: 45px;
+  height: 45px;
+  display: block;
+   border-radius: 5px;
 }
-li:active {
-  background-color: rgba(255, 255, 255, 0.1);
+#middle-box {
+  height: 100%;
+  width: 170px;
 }
-.avatar,
-.name {
-  vertical-align: middle;
+#right-box {
+  width: 30px;
+  height: 100%;
 }
-.avatar {
-  border-radius: 2px;
+#name{
+  font-size: 15px;
+  font-weight: bold;
+  padding: 3px;
 }
-.name {
-  display: inline-block;
-  margin: 0 0 0 15px;
+#content{
+  color: #999999;
+  font-size: 10px;
+  padding: 3px;
 }
 </style>
